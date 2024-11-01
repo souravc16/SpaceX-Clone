@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX</title>
+     <link rel="icon"
+        href="spax.png"
+        type="image"> 
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link rel="Shortcut Icon" type="image/ico" href="static/images/favicon.ico">
+    <link rel="stylesheet" href="clone4.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icons" href="https://i.pinimg.com/736x/e7/29/c7/e729c7a5759883019af407bc0111fdab.jpg">
+</head>
+<style>
+    *{
+    font-family: "M PLUS 1", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-right: 30px;
+        padding-left: 20px;
+        height: 80px;
+        color: #fff;
+        z-index: 1000;
+        
+    }
+
+    a.logo{
+    margin-top: -1px;
+    padding-left: 100px;
+    height: 34px;
+    width: 300px;
+    color: white;
+    }
+
+    .navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 50spx;
+    font-size: 15px;
+    padding-right: 30px;
+
+    }
+    .navbar ul li{
+    cursor: pointer;
+    transform: 0.5s;
+    padding: 3px 10px;
+    border-radius: 5px;
+    
+    
+
+    }
+    
+
+    .logo{
+    width: 0px;
+    height: 30px;
+    cursor: pointer;
+    filter: brightness(0)invert(1);
+    }
+    .navbar .icons{
+    display: flex;
+    font-size: 25px;
+    gap: 10px;
+    cursor: pointer;
+    }
+
+    .navbar .icons i{
+    border-radius: 2px;
+    padding: 3px;
+    transition: 0.5s;
+    }
+    .img {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    flex-direction: column;
+    }
+
+    .img li{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        justify-content: space-between;
+        padding-top: 400px;
+        padding-right: 800px;
+        
+        padding-bottom: 10px;
+        color: #fff;
+        scroll-snap-align: start;
+
+    }
+    .img-info{
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    text-align: left;
+    padding-left: 120px;
+    
+    }
+    .img li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    }
+    .img li video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        }
+
+
+    .img-info{
+        line-height: 45px;
+    }
+
+    .img-info h1 {
+    letter-spacing: 1px;
+    font-size: 42px;
+    font-weight: bold;
+    }
+
+    .img-info h3 {
+    font-size: 25px;
+    font-weight: 600;
+    }
+
+    .img-info p {
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 15px;
+        padding-bottom: 10px;
+        }
+
+    .img-footer .buttons {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 17px;
+    justify-content: center;
+
+    }
+    .img-footer .buttons button {
+    font-size: 14px;
+    padding: 10px 100px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    }
+    .img-footer .buttons button:first-child {
+    background-color: #3e6ae1;
+    color: #fff;
+    }
+
+    .img-footer .buttons button:last-child {
+    background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .img-footer .buttons.inverted button:first-child {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #fff;
+    }
+
+    .img-footer .buttons.inverted button:last-child {
+    background-color: rgba(34, 34, 34, 0.8);
+    color: #fff;
+    }
+
+    .shop-button{
+    font-size: 14px;
+    padding: 10px 100px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #3e6ae1;
+    color: #fff;
+    margin-top: 490px;
+    }
+
+    .footer {
+    background-color: #000;
+    height: 100px;
+    color: #ded1d2;
+    text-align: center;
+    font-size: 11.5px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .footer .spp {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+    color: #fff;
+    }
+    .footer .sp {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 20px;
+        letter-spacing: 0.2px;
+        color: #e7d9d9;
+        }
+    
+
+    .footer a {
+    color: white;
+    text-decoration: underline;
+    }
+
+    .footer a:hover {
+    text-decoration: underline;
+    }
+
+    .footer .footer-links {
+    margin-top: 50px;
+    }
+
+    .footer .footer-links a {
+    margin: 0 7px;
+    color: #ded1d2;
+    text-decoration: none;
+    }
+
+
+
+    body {
+        background-color: black;
+    }
+
+    .hr {
+        display: none;
+        /* background-color: rgba(255,255,255,0); */
+    }
+
+    a {
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+
+    .container {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 5px) rotate(-45deg);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: translate(0, -5px) rotate(45deg);
+    }
+
+    .bx {
+        font-size: 14px;
+        margin-top: 25px;
+    }
+
+    .p {
+
+        border: 1px solid white;
+        width: 150px;
+        padding-left: 25px;
+        margin-top: 30px;
+    }
+
+    .p:hover {
+        color: black;
+        background-color: aliceblue;
+    }
+
+    .pp {
+
+        border: 1px solid white;
+        width: 150px;
+        padding-left: 42px;
+        margin-top: 30px;
+    }
+
+    .pp:hover {
+        color: black;
+        background-color: aliceblue;
+    }
+
+
+
+
+
+
+
+
+
+
+    
+</style>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- <a href="#" class="logo">
+                <svg class="tds-icon tds-icon-logo-wordmark tds-site-logo-icon" viewBox="0 0 342 35"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor"
+                        d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 0 0 6-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 0 0-8.7 7h39.9v-21h-31.2v-7zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 13.8h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7m0 14.1h26a9.6 9.6 0 0 0 7.1-7H78.3a9.6 9.6 0 0 0 7 7M308.5 7h26a9.6 9.6 0 0 0 7-7h-40a9.6 9.6 0 0 0 7 7">
+                    </path>
+                </svg>
+            </a> -->
+
+            <a href="/" id="logo" aria-label="SpaceX Homepage" class="logo">
+                <svg version="1.1" x="0px" y="0px" viewBox="0 0 400 50" aria-hidden="true">
+                    <title>SpaceX Logo</title>
+                    <g class="letter_s">
+                        <path class="fill-white" d="M37.5,30.5H10.9v-6.6h34.3c-0.9-2.8-3.8-5.4-8.9-5.4H11.4c-5.7,0-9,2.1-9,6.7v4.9c0,4,3.4,6.3,8.4,6.3h26.9v7H1.5
+                    c0.9,3.8,3.8,5.8,9,5.8h27.1c5.7,0,8.5-2.2,8.5-6.9v-4.9C46.1,33.1,42.8,30.8,37.5,30.5z"></path>
+                    </g>
+                    <g class="letter_p">
+                        <path class="fill-white" d="M91.8,18.6H59v30.7h9.3V37.5h24.2c6.7,0,10.4-2.3,10.4-7.7v-3.4C102.8,21.4,98.6,18.6,91.8,18.6z M94.8,28.4
+                    c0,2.2-0.4,3.4-4,3.4H68.3l0.1-8h22c4,0,4.5,1.2,4.5,3.3V28.4z"></path>
+                    </g>
+                    <g class="letter_a">
+                        <polygon class="fill-white"
+                            points="129.9,17.3 124.3,24.2 133.8,37.3 114,37.3 109.1,42.5 137.7,42.5 142.6,49.3 153.6,49.3 	">
+                        </polygon>
+                    </g>
+                    <g class="letter_c">
+                        <path class="fill-white" d="M171.4,23.9h34.8c-0.9-3.6-4.4-5.4-9.4-5.4h-26c-4.5,0-8.8,1.8-8.8,6.7v17.2c0,4.9,4.3,6.7,8.8,6.7h26.3
+                    c6,0,8.1-1.7,9.1-5.8h-34.8V23.9z"></path>
+                    </g>
+                    <g class="letter_e">
+                        <polygon class="fill-white"
+                            points="228.3,43.5 228.3,34.1 247,34.1 247,28.9 218.9,28.9 218.9,49.3 260.4,49.3 260.4,43.5 	">
+                        </polygon>
+                        <rect class="fill-white" x="219.9" y="18.6" width="41.9" height="5.4"></rect>
+                    </g>
+                    <g class="letter_x">
+                        <path class="fill-white" d="M287.6,18.6H273l17.2,12.6c2.5-1.7,5.4-3.5,8-5L287.6,18.6z"></path>
+                        <path class="fill-white" d="M308.8,34.3c-2.5,1.7-5,3.6-7.4,5.4l13,9.5h14.7L308.8,34.3z"></path>
+                    </g>
+                    <g class="letter_swoosh">
+                        <path class="fill-white"
+                            d="M399,0.7c-80,4.6-117,38.8-125.3,46.9l-1.7,1.6h14.8C326.8,9.1,384.3,2,399,0.7L399,0.7z">
+                        </path>
+                    </g>
+                </svg>
+            </a>
+
+            </a>
+
+            <ul>
+                <li>
+                    <div><a href="">FALCON 9</a>
+                        <!-- <hr size="4" color="blue" class="hr"> -->
+                    </div>
+                </li>
+                <li>
+                    <div><a href="">FALON HEAVY</a>
+                        <!-- <hr size="4" color="blue" class="hr"> -->
+                    </div>
+                </li>
+                <li>
+                    <div><a href="">DRAGON</a>
+                        <!-- <hr size="4" color="blue" class="hr"> -->
+                    </div>
+                </li>
+                <li>
+                    <div><a href="">STARTSHIP</a>
+                        <!-- <hr size="4" color="blue" class="hr"> -->
+                    </div>
+                </li>
+                <li>
+                    <div><a href="">HUMAN SPACEFLIT</a>
+                        <!-- <hr size="4" color="blue" class="hr"> -->
+                    </div>
+                </li>
+
+                <li>
+                    <div><a href="">RIDESHARE</a>
+                        <!-- <hr size="4" color="blue" class="hr"> -->
+                    </div>
+                </li>
+                <li>
+                    <div><a href="">STARTSHILD</a>
+                        <!-- <hr size="4" color="blue" class="hr"> -->
+                    </div>
+                </li>
+                <li>
+                    <div><a href="">STARLINK</a>
+                        <!-- <hr size="4" color="blue" class="hr"> -->
+                    </div>
+                </li>
+            </ul>
+            <div class="icons">
+                <i class='bx '>SHOP</i>
+                <i class='bx '></i>
+                <i class='bx '>
+                    <div class="container" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </i>
+            </div>
+
+            <script>
+                function myFunction(x) {
+                    x.classList.toggle("change");
+                }
+            </script>
+
+            </div>
+
+
+
+            <!-- <button id="hamburger" aria-expanded="false" aria-controls="menu" aria-label="Menu" role="button" aria-haspopup="dialog">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+              </button> -->
+        </nav>
+    </header>
+    <section>
+
+
+
+        <!-- <video aria-hidden="true" data-content-video="true" poster="https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_5_Website_Desktop_1_12e2f537a0.jpg" muted="" playsinline="" loop="" autoplay="">
+            <source type="video/mp4" src="https://sxcontent9668.azureedge.us/cms-assets/assets/S30_B12_Sunset_20240926_1080_P_Website_V2_f5f88f7bf0.mp4">
+          </video> -->
+
+        <ul class="img">
+            <li> <video aria-hidden="true" data-content-video="true"
+                    poster="https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_5_Website_Desktop_1_12e2f537a0.jpg"
+                    muted="" playsinline="" loop="" autoplay="">
+                    <source type="video/mp4"
+                        src="https://sxcontent9668.azureedge.us/cms-assets/assets/S30_B12_Sunset_20240926_1080_P_Website_V2_f5f88f7bf0.mp4">
+                </video>
+                <div class="img-info">
+                    <h5>UPCOMING LAUNCH</h5>
+                    <h1>STARSHIP'S FIFTH <br> FLIGHT TEST</h1>
+                    <div class="btn">
+                        <h5 class="p">LEARN MORE</h5>
+
+                    </div>
+
+                </div>
+            </li>
+
+            <li>
+                <img
+                    src="https://sxcontent9668.azureedge.us/cms-assets/assets/Hera_pad39a_DSC_2202_desktop_5cb5f51134.jpg">
+                <div class="img-info">
+                    <h5>RECENT LAUNCH</h5>
+                    <h1>HERA MISSION</h1>
+                    <div class="btn">
+                        <h5 class="pp">REWATCH</h5>
+
+                    </div>
+
+                </div>
+            </li>
+
+            <li>
+                <img
+                    src="https://sxcontent9668.azureedge.us/cms-assets/assets/Crew_9_outsidewater_DSC_0524_desktop_24f79ebf8a.jpg">
+                <div class="img-info">
+                    <h5>CURRENT MISSION</h5>
+                    <h1>CREW-9 MISSION</h1>
+                    <div class="btn">
+                        <h5 class="pp">REWATCH</h5>
+
+                    </div>
+
+                </div>
+            </li>
+
+            <li> <video aria-hidden="true" data-content-video="true"
+                    poster="https://sxcontent9668.azureedge.us/cms-assets/assets/PD_Splashdown_Crew_20240915_DSC_02307_Desktop_412628ab0e.jpg"
+                    muted="" playsinline="" loop="" autoplay="">
+                    <source type="video/mp4"
+                        src="https://sxcontent9668.azureedge.us/cms-assets/assets/Polaris_Splashdown_Wave2_1080_P_03fdcbc6ae.mp4">
+                </video>
+
+                <div class="img-info">
+                    <h5>RECENT MISSION</h5>
+                    <h1>POLARIAS DAWN</h1>
+                    <div class="btn">
+                        <h5 class="pp">REWATCH</h5>
+
+                    </div>
+
+                </div>
+            </li>
+
+            <li>
+                <img
+                    src="https://sxcontent9668.azureedge.us/cms-assets/assets/Eva_Suit_Desktop_alternate_1cf9bae18e.jpg">
+                <div class="img-info">
+
+                    <h1>ADVANCING HUMAN <br> SPACEFLIT</h1>
+                    <div class="btn">
+                        <h5 class="p">LEARN MORE</h5>
+
+                    </div>
+
+                </div>
+            </li>
+
+            <li>
+                <img
+                    src="https://sxcontent9668.azureedge.us/cms-assets/assets/make_life_multiplanetary_desktop_3fa7cff73c.jpg">
+                <div class="img-info">
+
+                    <h1>TO MAKE LIFE <br> MULTIPLANETARY</h1>
+                    <div class="btn">
+                        <h5 class="p">LEARN MORE</h5>
+
+                    </div>
+
+                </div>
+            </li>
+
+</section>
+
+           <section>
+            <div class="footer">
+               <p class="sp">SPACEX@2024</p> 
+               <P class="spp">PRIVACY POLICY</P>
+               <P class="spp">SUPLIERS</P>
+            </div>
+           </section>
+
+
+</body>
+
+</html>
